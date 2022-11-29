@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <title>Diana Pineda</title>
+    <meta
+      name="description"
+      content="Diana Pineda, Desarrolladora de Software Jr en Colombia"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  </head>
+
+  <body class="container">
+    <div class="containerA">
+      <div class="img-frame">
+        <img src="perfil.jpg" alt="" />
+      </div>
+      <div>
+        <h1>Diana Pineda</h1>
+        <h2>
+          <p class="deslizamiento">
+            Desarrolladora de Software Jr. en Colombia
+          </p>
+        </h2>
+      </div>
+
+      <div class="links">
+        <a
+          href="https://www.instagram.com/pinedathetrader/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >instagram</a
+        >
+        <a
+          href="https://github.com/dianipineda"
+          target="_blank"
+          rel="noopener noreferrer"
+          >github</a
+        >
+      </div>
+      <br />
+    </div>
+    <div class="containerB">
+      <div class="bio-switcher">
+        <div class="toggler">
+          <br>
+          <button id="perfil" class="show">Perfil</button>
+          <button id="proyectos">Proyectos</button>
+          <button id="curriculum">Currículum</button>
+        </div>
+        <div class="bio perfil show">
+          El perfil industrial con el que inicialmente me formé terminó
+          enseñándome mi pasión por el desarrollo de software, por lo tanto
+          llevo más de un año aprendiendo tecnologías de desarrollo web. Mi
+          objetivo como profesional es poder construir un mundo mejor a través
+          de la digitalización de procesos y trabajo día a día por adquirir
+          conocimientos y experiencia en este maravilloso mundo de la
+          programación. También soy trader de forex, amante del medio ambiente,
+          disfruto mucho el arte escénico y cinematográfico además me encanta
+          dedicar tiempo a mi desarrollo personal.
+        </div>
+        <div class="bio proyectos">
+          <script>
+            var current = 0;
+            var imagenes = new Array();
+
+            $(document).ready(function () {
+              var numImages = 3;
+              if (numImages <= 1) {
+                $(".right-arrow").css("display", "none");
+                $(".left-arrow").css("display", "none");
+              }
+
+              $(".left-arrow").on("click", function () {
+                if (current > 0) {
+                  current = current - 1;
+                }
+
+                $(".carrusel").animate(
+                  { left: -$("#proyecto_" + current).position().left },
+                  600
+                );
+
+                return false;
+              });
+
+              $(".left-arrow").on(
+                "hover",
+                function () {
+                  $(this).css("opacity", "0.5");
+                },
+                function () {
+                  $(this).css("opacity", "1");
+                }
+              );
+
+              $(".right-arrow").on(
+                "hover",
+                function () {
+                  $(this).css("opacity", "0.5");
+                },
+                function () {
+                  $(this).css("opacity", "1");
+                }
+              );
+
+              $(".right-arrow").on("click", function () {
+                if (numImages > current + 1) {
+                  current = current + 1;
+                }
+
+                $(".carrusel").animate(
+                  { left: -$("#proyecto_" + current).position().left },
+                  600
+                );
+
+                return false;
+              });
+            });
+          </script>
+          Mis proyectos:
+          <div class="row">
+            <div id="content">
+              <div id="carrusel">
+                <a href="#" class="left-arrow"><img src="left-arrow.png" /></a>
+                <a href="#" class="right-arrow"
+                  ><img src="right-arrow.png"
+                /></a>
+                <div class="carrusel">
+                  <div class="proyecto" id="proyecto_0">
+                    <img src="crud2.png" width="195" height="100" />
+                    <h5>CRUD Invitados a fiesta</h5>
+                    <a
+                      href="https://app-invitados.fly.dev/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Acceder</a
+                    >
+                    <h5>Stack de MERN con nodejs y Mongo DB</h5>
+                  </div>
+                  <div class="proyecto" id="proyecto_1">
+                    <img src="crud1.png" width="195" height="100" />
+                    <h5>CRUD Productos y Vendedores</h5>
+                    <a
+                      href="https://youtu.be/qi5rzt8CaVg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Ver</a
+                    >
+                    <h5>Java, SpringBoot y Thymeleaf</h5>
+                  </div>
+                  <div class="proyecto" id="proyecto_2">
+                    <img src="ideapp.png" width="195" height="100" />
+                    <h5>app de gestión de ideas en una organización</h5>
+                    <a
+                      href="https://youtu.be/5eHu7jWp5zQ"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Ver</a
+                    >
+                    <h5>Power apps, Power Automate, Sharepoint</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="bio curriculum">
+          <h1>descargar hoja de vida</h1>
+          <input type="file" id="input-file-now" data-plugin="dropify"  data- default-file="URL_DOCUMENTO"/>
+          <a href="URL_DOCUMENTO" download> Descargar </a> 
+
+        </div>
+      </div>
+    </div>
+
+    <div class="dark-mode-toggler">
+      <input type="checkbox" id="toggler" />
+      <label for="toggler" aria-label="Toggler for Dark Mode"></label>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
