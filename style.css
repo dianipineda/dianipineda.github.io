@@ -295,15 +295,11 @@ h6 {
 }
 
 #whatsapp {
-  position: absolute;
-  bottom: 300px;
-  left: 580px;
+  position: -webkit-sticky;
 }
 
 #telegram {
-  position: absolute;
-  bottom: 300px;
-  left: 680px;
+  position: -webkit-sticky;
 }
 
 svg {
