@@ -296,14 +296,14 @@ h6 {
 
 #whatsapp {
   position: absolute;
-  bottom: 260px;
-  left: 540px;
+  bottom: 300px;
+  left: 580px;
 }
 
 #telegram {
   position: absolute;
-  bottom: 260px;
-  left: 640px;
+  bottom: 300px;
+  left: 680px;
 }
 
 svg {
