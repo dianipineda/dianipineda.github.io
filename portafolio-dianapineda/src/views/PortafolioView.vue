@@ -15,8 +15,14 @@ export default {
   data() {
     return {
       svgs: [
-        '/path/to/tu-svg1.svg',  // Reemplaza con tus rutas a SVGs
-        '/path/to/tu-svg2.svg',
+        '/public/ingesta_datalake.svg',
+        '/public/integracion_consumo_combustible.svg',
+        '/public/integracion_datos_conductor_a_documento.svg',
+        '/public/integracion_ditribucion_costos_labor.svg',
+        '/public/integracion_novedades_nomina.svg',
+        '/public/integracion_precipitacion_granjas.svg',
+        '/public/integracion_productividad_granjas.svg',
+        '/public/integracion_productividad_maquinaria.svg'
         // Añade más aquí
       ]
     };
