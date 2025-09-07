@@ -9,8 +9,3 @@
   </div>
 </template>
 
-<style>
-.navbar { background: #f8f9fa; padding: 10px; text-align: center; }
-.navbar a { margin: 0 15px; text-decoration: none; color: #333; }
-.navbar a:hover { color: #007bff; }
-</style>
