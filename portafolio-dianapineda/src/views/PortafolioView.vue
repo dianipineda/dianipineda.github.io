@@ -90,14 +90,29 @@ export default {
 }
 
 /* Contenedor de los ítems */
+
 .p-galleria-item-wrapper {
-  aspect-ratio: 16 / 9;  /* proporción estándar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 100%;
-  max-height: 80vh;      /* opcional: evita que sea demasiado alto en pantallas grandes */
-  overflow: hidden;      /* recorta exceso */
+  height: 80vh;         /* altura fija de la galería */
+  max-width: 1200px;    /* opcional: ancho máximo */
+  margin: 0 auto;       /* centra el contenedor en la página */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background-color: #000; /* fondo negro para los espacios sobrantes */
+  overflow: hidden;
 }
+
+.p-galleria-item-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;   /* 🔑 la imagen nunca se recorta */
+  border-radius: 12px;   /* opcional: bordes redondeados */
+}
+
 
 .galleria-img {
   width: 100%;
