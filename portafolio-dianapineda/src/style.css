@@ -105,7 +105,7 @@ button:focus-visible {
 }
 
 /* Estilos para la galería de PrimeVue */
-.p-galleria {
+/*.p-galleria {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -128,4 +128,4 @@ button:focus-visible {
 .p-galleria-indicator button:hover,
 .p-galleria-indicator.p-highlight button {
   background: #007bff;
-}
+}*/

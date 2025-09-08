@@ -26,7 +26,7 @@ npm install
 npm install vue-router@4
 
 - Instalar PrimeVue, PrimeIcons, temas, y el componente Galleria:
-npm install primevue@latest primeicons @primevue/themes
+npm install primevue@latest primeicons@latest @primevue/themes@latest
 
 # -------------------------------------------------------------------------------------------
 # Requisitos basicos para correr el proyecto en Linux Ubuntu
@@ -54,7 +54,7 @@ Nota: setup_18.x
   luego volver a ejecutar: npm install
 - instalar librerias adicionales:
   instalar Vue Router: npm install vue-router@4
-  instalar PrimeVue y dependiencias: npm install primevue@latest primeicons @primevue/themes
+  instalar PrimeVue y dependiencias: npm install primevue@latest primeicons@latest @primevue/themes@latest
 
 # -------------------------------------------------------------------------------------------
 # Levantar proyecto en servidor de desarrollo
