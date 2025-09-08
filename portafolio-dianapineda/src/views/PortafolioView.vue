@@ -4,7 +4,6 @@
     <Galleria
       :value="images"
       :numVisible="8"
-      containerStyle="max-width: 640px"
       :showThumbnails="false"
       :showIndicators="true"
       :showNavigators="false"
@@ -90,6 +89,7 @@ export default {
   gap: 12px;
   justify-content: center;
   align-items: center;
+  padding:12px;
 }
 
 </style>
