@@ -3,7 +3,7 @@
     <h1>Portafolio</h1>
     <Galleria
       :value="images"
-      :numVisible="5"
+      :numVisible="8"
       containerStyle="max-width: 640px; margin: 0 auto;"
       :showThumbnails="false"
       :showIndicators="true"
