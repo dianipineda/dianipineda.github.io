@@ -42,3 +42,24 @@ Cambiar el color de acento (#007bff) o ajustar el espaciado.
 
 
 Prueba estos pasos y dime cómo se ve el sitio. Si hay errores (en la consola o la terminal), compártelos para resolverlos rápido. ¡Vamos a asegurarnos de que tu navbar quede perfecta y el sitio mantenga el estilo minimalista moderno!
+
+
+# comandos necesarios:
+Navega al directorio del proyecto:
+bashcd D:\Projects\dianipineda.github.io\portafolio-dianapineda
+
+Instala Node.js dependencias básicas (si no están instaladas):
+bashnpm install
+
+Instala Vue.js y Vite (si el proyecto no está creado):
+bashnpm create vite@latest . -- --template vue
+npm install
+
+Instala Vue Router:
+bashnpm install vue-router@4
+
+Instala PrimeVue, PrimeIcons, temas, y el componente Galleria:
+bashnpm install primevue@latest primeicons @primevue/themes
+
+
+Estos comandos instalan Node.js, las dependencias de Vue, Vue Router, PrimeVue, los íconos, los temas, y el componente Galleria. Asegúrate de que src/main.js importe styles.css y que los SVGs estén en public/. Si necesitas ayuda con la configuración de archivos o más pasos, ¡avísame!
