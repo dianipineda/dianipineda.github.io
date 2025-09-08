@@ -48,8 +48,11 @@ export default {
 .portafolio {
   text-align: center;
   padding: 2rem 1rem;
-  max-width: 800px;
+  width: 100%;
   margin: 0 auto;
+  /*nuevo*/
+  justify-content: center; 
+  align-items: center; 
 }
 
 /* 🎯 Estilos para los indicadores */
