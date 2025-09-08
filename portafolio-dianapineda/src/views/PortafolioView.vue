@@ -10,11 +10,13 @@
       indicatorsPosition="bottom"
     >
       <template #item="slotProps">
-        <img
-          :src="slotProps.item.itemImageSrc"
-          :alt="slotProps.item.alt"
-          class="galleria-img"
-        />
+        <div class="p-galleria-item-wrapper">
+          <img
+            :src="slotProps.item.itemImageSrc"
+            :alt="slotProps.item.alt"
+            class="galleria-img"
+          />
+        </div>
       </template>
     </Galleria>
   </div>
@@ -48,14 +50,6 @@ export default {
   padding: 2rem 1rem;
   max-width: 800px;
   margin: 0 auto;
-}
-
-.galleria-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* 🎯 Estilos para los indicadores */
@@ -92,4 +86,20 @@ export default {
   padding:12px;
 }
 
+/* Contenedor de los ítems */
+.p-galleria-item-wrapper {
+  aspect-ratio: 16 / 9;  /* proporción estándar */
+  width: 100%;
+  max-height: 80vh;      /* opcional: evita que sea demasiado alto en pantallas grandes */
+  overflow: hidden;      /* recorta exceso */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.galleria-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* rellena el contenedor sin deformarse */
+  display: block;
+}
 </style>
