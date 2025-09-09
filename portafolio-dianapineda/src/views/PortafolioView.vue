@@ -2,6 +2,7 @@
   <div class="portafolio">
     <h1>Portafolio</h1>
     <Galleria
+      v-model:activeIndex="activeIndex"
       :value="images"
       :numVisible="8"
       :showThumbnails="false"
@@ -9,6 +10,7 @@
       :showNavigators="false"
       indicatorsPosition="bottom"
     >
+      <!-- Imagen -->
       <template #item="slotProps">
         <div class="p-galleria-item-wrapper">
           <Image
@@ -20,25 +22,31 @@
         </div>
       </template>
     </Galleria>
+    <!-- Leyenda -->
+    <p class="galleria-caption">
+      {{ images[activeIndex]?.caption }}
+    </p>
   </div>
 </template>
 
 <script>
 import Galleria from 'primevue/galleria';
 import Image from 'primevue/image';
+
 export default {
   components: { Galleria, Image },
   data() {
     return {
+      activeIndex: 0, // índice actual de la galería
       images: [
-        { itemImageSrc: '/public/ingesta_datalake.svg', alt: 'Imagen SVG 1' },
-        { itemImageSrc: '/public/integracion_consumo_combustible.svg', alt: 'Imagen SVG 2' },
-        { itemImageSrc: '/public/integracion_datos_conductor_a_documento.svg', alt: 'Imagen SVG 3' },
-        { itemImageSrc: '/public/integracion_ditribucion_costos_labor.svg', alt: 'Imagen SVG 4' },
-        { itemImageSrc: '/public/integracion_novedades_nomina.svg', alt: 'Imagen SVG 5' },
-        { itemImageSrc: '/public/integracion_precipitacion_granjas.svg', alt: 'Imagen SVG 6' },
-        { itemImageSrc: '/public/integracion_productividad_granjas.svg', alt: 'Imagen SVG 7' },
-        { itemImageSrc: '/public/integracion_productividad_maquinaria.svg', alt: 'Imagen SVG 8' }
+        { itemImageSrc: '/public/ingesta_datalake.svg', alt: 'Imagen SVG 1', caption: 'Diseño e implementación de flujo de datos para Big Data' },
+        { itemImageSrc: '/public/integracion_consumo_combustible.svg', alt: 'Imagen SVG 2', caption: 'Automatización de datos entre APIs y Bases de datos'  },
+        { itemImageSrc: '/public/integracion_datos_conductor_a_documento.svg', alt: 'Imagen SVG 3', caption: 'Automatización de datos entre APIs y Bases de datos'  },
+        { itemImageSrc: '/public/integracion_ditribucion_costos_labor.svg', alt: 'Imagen SVG 4', caption: 'Automatización de datos entre diferentes motores de Bases de datos'  },
+        { itemImageSrc: '/public/integracion_novedades_nomina.svg', alt: 'Imagen SVG 5', caption: 'Automatización de datos para archivos planos'  },
+        { itemImageSrc: '/public/integracion_precipitacion_granjas.svg', alt: 'Imagen SVG 6', caption: 'Automatización de datos entre APIs y Bases de datos'  },
+        { itemImageSrc: '/public/integracion_productividad_granjas.svg', alt: 'Imagen SVG 7', caption: 'Automatización de datos entre APIs y Bases de datos'  },
+        { itemImageSrc: '/public/integracion_productividad_maquinaria.svg', alt: 'Imagen SVG 8', caption: 'Automatización de datos entre APIs y Bases de datos'  }
       ]
     };
   }
@@ -117,5 +125,13 @@ export default {
   height: 100%;
   object-fit: cover;  /* rellena el contenedor sin deformarse */
   display: block;
+}
+
+/* Estilos de la leyenda */
+.galleria-caption {
+  margin-top: 0.1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #c4c4c4;
 }
 </style>
