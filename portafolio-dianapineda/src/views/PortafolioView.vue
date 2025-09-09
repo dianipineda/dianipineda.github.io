@@ -64,7 +64,7 @@ export default {
   margin-top: 1.5rem;
 }
 
-.p-galleria-indicator {
+.p-galleria-indicator > button {
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -72,12 +72,6 @@ export default {
   transition: all 0.3s ease;
   cursor: pointer;
   border: none;
-}
-
-.p-galleria-indicator.p-highlight {
-  background: #007bff; /* azul activo */
-  transform: scale(1.3);
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
 }
 
 .p-galleria-indicators,
@@ -114,6 +108,9 @@ export default {
   border-radius: 12px;   /* opcional: bordes redondeados */
 }
 
+.p-galleria .p-galleria-indicator-active .p-galleria-indicator-button {
+  background: #eab676;
+}
 
 .galleria-img {
   width: 100%;
