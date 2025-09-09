@@ -27,7 +27,8 @@ npm install vue-router@4
 
 - Instalar PrimeVue, PrimeIcons, temas, y el componente Galleria:
 npm install primevue@latest primeicons@latest @primevue/themes@latest
-
+- instalar animaciones:
+npm install tailwindcss
 # -------------------------------------------------------------------------------------------
 # Requisitos basicos para correr el proyecto en Linux Ubuntu
 - sudo apt update
@@ -57,7 +58,7 @@ Nota: setup_18.x
   instalar PrimeVue y dependiencias: npm install primevue@latest primeicons@latest @primevue/themes@latest
 
 - instalar animaciones:
-npm install vue-particles --save
+npm install tailwindcss
 # -------------------------------------------------------------------------------------------
 # Levantar proyecto en servidor de desarrollo
 - iniciar servidor de desarrollo: 

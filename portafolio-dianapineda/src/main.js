@@ -7,6 +7,7 @@ import './style.css';
 import 'primeicons/primeicons.css';
 import '@primevue/themes/aura'; // <-- Este es el estilo para los componentes
 
+
 const app = createApp(App);
 app.use(router);
 app.use(PrimeVue);
