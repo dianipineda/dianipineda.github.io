@@ -8,22 +8,22 @@
 
     <div class="iconos">
       <!-- Correo -->
-      <a href="mailto:tuemail@ejemplo.com" class="icon email">
+      <a href="dianipineda55@gmail.com" class="icon email">
         <i class="pi pi-envelope"></i>
       </a>
 
       <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/tuusuario" target="_blank" class="icon linkedin">
+      <a href="https://www.linkedin.com/in/diana-pineda-303838162/" target="_blank" class="icon linkedin">
         <i class="pi pi-linkedin"></i>
       </a>
 
       <!-- GitHub -->
-      <a href="https://github.com/tuusuario" target="_blank" class="icon github">
+      <a href="https://github.com/dianipineda" target="_blank" class="icon github">
         <i class="pi pi-github"></i>
       </a>
 
       <!-- WhatsApp -->
-      <a href="https://wa.me/573000000000" target="_blank" class="icon whatsapp">
+      <a href="https://wa.me/573145844399" target="_blank" class="icon whatsapp">
         <i class="pi pi-whatsapp"></i>
       </a>
     </div>
