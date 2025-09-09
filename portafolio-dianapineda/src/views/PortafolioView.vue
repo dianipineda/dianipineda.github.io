@@ -102,7 +102,7 @@ export default {
   margin: 0 auto;       /* centra el contenedor en la página */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  background-color: #000; /* fondo negro para los espacios sobrantes */
+  background-color: #242424; /* fondo negro para los espacios sobrantes */
   overflow: hidden;
 }
 
