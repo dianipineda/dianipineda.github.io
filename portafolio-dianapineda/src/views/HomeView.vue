@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="flex justify-center items-center h-screen bg-gray-900">
+    <div class="flex items-center w-full h-screen bg-gray-900 text-white px-8">
+      <h1>Bienvenido a mi sitio</h1>
       <svg :width="size" :height="size" viewBox="0 0 400 400" :style="{ opacity: allWhite ? 0.5 : 0.4 }">
         <!-- Líneas -->
         <line
@@ -45,17 +46,16 @@
         />
       </svg>
     </div>
-    <h1>Bienvenido a mi sitio</h1>
-    <p>Usa el menú para navegar.</p>
+      <p>Usa el menú para navegar.</p>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
 
-const size = 200;
+const size = 180;
 const center = { x: 200, y: 200 };
-const radius = 120;
+const radius = 100;
 const totalNodes = 5;
 
 // Calculamos posiciones en círculo
