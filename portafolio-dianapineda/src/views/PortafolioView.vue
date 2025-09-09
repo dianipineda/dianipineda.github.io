@@ -11,9 +11,10 @@
     >
       <template #item="slotProps">
         <div class="p-galleria-item-wrapper">
-          <img
+          <Image
             :src="slotProps.item.itemImageSrc"
             :alt="slotProps.item.alt"
+            preview
             class="galleria-img"
           />
         </div>
@@ -24,9 +25,9 @@
 
 <script>
 import Galleria from 'primevue/galleria';
-
+import Image from 'primevue/image';
 export default {
-  components: { Galleria },
+  components: { Galleria, Image },
   data() {
     return {
       images: [
@@ -91,7 +92,7 @@ export default {
 
 /* Contenedor de los ítems */
 
-.p-galleria-item-wrapper {
+.p-galleria-item-wrapper .p-image {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,7 +107,7 @@ export default {
   overflow: hidden;
 }
 
-.p-galleria-item-wrapper img {
+.p-galleria-item-wrapper .p-image img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;   /* 🔑 la imagen nunca se recorta */
