@@ -56,6 +56,8 @@ Nota: setup_18.x
   instalar Vue Router: npm install vue-router@4
   instalar PrimeVue y dependiencias: npm install primevue@latest primeicons@latest @primevue/themes@latest
 
+- instalar animaciones:
+npm install vue-particles --save
 # -------------------------------------------------------------------------------------------
 # Levantar proyecto en servidor de desarrollo
 - iniciar servidor de desarrollo: 

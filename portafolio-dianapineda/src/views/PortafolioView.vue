@@ -1,6 +1,6 @@
 <template>
   <div class="portafolio">
-    <h1>Portafolio</h1>
+    <h1>Conecta tus datos, impulsa tu negocio</h1>
     <Galleria
       v-model:activeIndex="activeIndex"
       :value="images"
@@ -22,10 +22,32 @@
         </div>
       </template>
     </Galleria>
+
     <!-- Leyenda -->
     <p class="galleria-caption">
       {{ images[activeIndex]?.caption }}
     </p>
+
+    <!-- Galería secundaria autoplay -->
+    <Galleria
+      :value="secondaryImages"
+      :numVisible="8"
+      :showThumbnails="false"
+      :showIndicators="false"
+      :showNavigators="false"
+      :autoPlay="true"
+      :circular="true"
+      :transitionInterval="1500"
+      containerStyle="max-width: 80px; height: auto; margin: 0 auto; display: block;"
+    >
+      <template #item="slotProps">
+        <img
+          :src="slotProps.item.itemImageSrc"
+          :alt="slotProps.item.alt"
+          style="width: 100%; display: block; border-radius: 8px;"
+        />
+      </template>
+    </Galleria>
   </div>
 </template>
 
@@ -47,6 +69,16 @@ export default {
         { itemImageSrc: '/public/integracion_precipitacion_granjas.svg', alt: 'Imagen SVG 6', caption: 'Automatización de datos entre APIs y Bases de datos'  },
         { itemImageSrc: '/public/integracion_productividad_granjas.svg', alt: 'Imagen SVG 7', caption: 'Automatización de datos entre APIs y Bases de datos'  },
         { itemImageSrc: '/public/integracion_productividad_maquinaria.svg', alt: 'Imagen SVG 8', caption: 'Automatización de datos entre APIs y Bases de datos'  }
+      ],
+      secondaryImages: [
+        { itemImageSrc: '/public/python-3-logo-svgrepo-com.svg', alt: 'Python' },
+        { itemImageSrc: '/public/oracle-svgrepo-com.svg', alt: 'Oracle' },
+        { itemImageSrc: '/public/microsoft-sql-server-logo-svgrepo-com.svg', alt: 'SQL Server' },
+        { itemImageSrc: '/public/docker-svgrepo-com.svg', alt: 'Docker' },
+        { itemImageSrc: '/public/postgresql-horizontal.svg', alt: 'Postgresql' },
+        { itemImageSrc: '/public/kafka-svgrepo-com.svg', alt: 'Kafka' },
+        { itemImageSrc: '/public/apache-airflow-svgrepo-com.svg', alt: 'Airflow' },
+        { itemImageSrc: '/public/apachespark-svgrepo-com.svg ', alt: 'Spark' }
       ]
     };
   }
