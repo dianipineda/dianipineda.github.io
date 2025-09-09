@@ -1,8 +1,8 @@
 <template>
   <div class="portafolio">
-    <h1>Soluciones</h1>
     <Galleria
-      v-model="activeIndex"
+      :activeIndex="activeIndex" 
+      @update:activeIndex="activeIndex = $event" 
       :value="images"
       :numVisible="8"
       :showThumbnails="false"
@@ -27,27 +27,6 @@
     <p class="galleria-caption">
       {{ images[activeIndex]?.caption }}
     </p>
-
-    <!-- Galería secundaria autoplay -->
-    <Galleria
-      :value="secondaryImages"
-      :numVisible="8"
-      :showThumbnails="false"
-      :showIndicators="false"
-      :showNavigators="false"
-      :autoPlay="true"
-      :circular="true"
-      :transitionInterval="1500"
-      containerStyle="max-width: 80px; height: auto; margin: 0 auto; display: block;"
-    >
-      <template #item="slotProps">
-        <img
-          :src="slotProps.item.itemImageSrc"
-          :alt="slotProps.item.alt"
-          style="width: 100%; display: block; border-radius: 8px;"
-        />
-      </template>
-    </Galleria>
   </div>
 </template>
 
@@ -69,16 +48,6 @@ export default {
         { itemImageSrc: '/public/integracion_precipitacion_granjas.svg', alt: 'Imagen SVG 6', caption: 'Automatización de datos entre APIs y Bases de datos'  },
         { itemImageSrc: '/public/integracion_productividad_granjas.svg', alt: 'Imagen SVG 7', caption: 'Automatización de datos entre APIs y Bases de datos'  },
         { itemImageSrc: '/public/integracion_productividad_maquinaria.svg', alt: 'Imagen SVG 8', caption: 'Automatización de datos entre APIs y Bases de datos'  }
-      ],
-      secondaryImages: [
-        { itemImageSrc: '/public/python-3-logo-svgrepo-com.svg', alt: 'Python' },
-        { itemImageSrc: '/public/oracle-svgrepo-com.svg', alt: 'Oracle' },
-        { itemImageSrc: '/public/microsoft-sql-server-logo-svgrepo-com.svg', alt: 'SQL Server' },
-        { itemImageSrc: '/public/docker-svgrepo-com.svg', alt: 'Docker' },
-        { itemImageSrc: '/public/postgresql-horizontal.svg', alt: 'Postgresql' },
-        { itemImageSrc: '/public/kafka-svgrepo-com.svg', alt: 'Kafka' },
-        { itemImageSrc: '/public/apache-airflow-svgrepo-com.svg', alt: 'Airflow' },
-        { itemImageSrc: '/public/apachespark-svgrepo-com.svg ', alt: 'Spark' }
       ]
     };
   }
@@ -88,7 +57,7 @@ export default {
 <style>
 .portafolio {
   text-align: center;
-  padding: 2.3rem 1rem;
+  padding: 2rem 1rem;
   width: 100%;
   margin: 0 auto;
   /*nuevo*/
@@ -132,8 +101,8 @@ export default {
   justify-content: center;
 
   width: 100%;
-  height: 80vh;         /* altura fija de la galería */
-  max-width: 1200px;    /* opcional: ancho máximo */
+  height: 70vh;         /* altura fija de la galería */
+  max-width: 2000px;    /* opcional: ancho máximo */
   margin: 0 auto;       /* centra el contenedor en la página */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);

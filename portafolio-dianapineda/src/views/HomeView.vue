@@ -51,12 +51,33 @@
       <router-link to="/portafolio" class="enlace">
         Ejemplos de soluciones en accion
       </router-link>
+      <!-- Galería secundaria autoplay -->
+      <Galleria
+        :value="secondaryImages"
+        :numVisible="8"
+        :showThumbnails="false"
+        :showIndicators="false"
+        :showNavigators="false"
+        :autoPlay="true"
+        :circular="true"
+        :transitionInterval="1500"
+        containerStyle="max-width: 100px; height: auto; margin: 0 auto; display: block; padding-top: 32px;"
+      >
+        <template #item="slotProps">
+          <img
+            :src="slotProps.item.itemImageSrc"
+            :alt="slotProps.item.alt"
+            style="width: 100%; display: block; border-radius: 8px;"
+          />
+        </template>
+      </Galleria>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
+import Galleria from 'primevue/galleria';
 
 const size = 180;
 const center = { x: 200, y: 200 };
@@ -109,6 +130,18 @@ onMounted(() => {
 
   startAnimation();
 });
+
+// Secondary images for the Galleria component
+const secondaryImages = [
+  { itemImageSrc: '/public/python-3-logo-svgrepo-com.svg', alt: 'Python' },
+  { itemImageSrc: '/public/oracle-svgrepo-com.svg', alt: 'Oracle' },
+  { itemImageSrc: '/public/microsoft-sql-server-logo-svgrepo-com.svg', alt: 'SQL Server' },
+  { itemImageSrc: '/public/docker-svgrepo-com.svg', alt: 'Docker' },
+  { itemImageSrc: '/public/postgresql-horizontal.svg', alt: 'Postgresql' },
+  { itemImageSrc: '/public/kafka-svgrepo-com.svg', alt: 'Kafka' },
+  { itemImageSrc: '/public/apache-airflow-svgrepo-com.svg', alt: 'Airflow' },
+  { itemImageSrc: '/public/apachespark-svgrepo-com.svg ', alt: 'Spark' }
+];
 </script>
 
 
