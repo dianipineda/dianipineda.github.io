@@ -12,7 +12,10 @@
           :y2="node.y"
           stroke="white"
           stroke-width="2"
-          :class="{ 'line-active': activeIndex >= index }"
+          :class="[
+            { 'line-active': activeIndex >= index },
+            { 'line-white': allWhite }
+          ]"
         />
 
         <!-- Nodos -->
@@ -32,7 +35,10 @@
           cy="200"
           r="30"
           class="node"
-          :class="{ 'node-active': activeIndex === nodes.length }"
+          :class="[
+            { 'node-active': activeIndex >= index },
+            { 'node-white': allWhite }
+          ]"
         />
       </svg>
     </div>
@@ -59,24 +65,38 @@ const nodes = Array.from({ length: totalNodes }, (_, i) => {
 });
 
 const activeIndex = ref(-1);
+const allWhite = ref(false);
+
 onMounted(() => {
   const startAnimation = () => {
+    allWhite.value = false;
+
     nodes.forEach((_, i) => {
       setTimeout(() => {
         activeIndex.value = i;
-      }, i * 1000); // cada nodo 1s
+      }, i * 1000);
     });
 
-    // Al final, enciende el nodo central
     setTimeout(() => {
-      activeIndex.value = nodes.length;
+      activeIndex.value = nodes.length; // central
     }, nodes.length * 1000);
 
-    // Reinicia después de terminar todo el ciclo
+    // Al terminar, encendemos "modo blanco"
     setTimeout(() => {
-      activeIndex.value = -1; // apaga todo
-      startAnimation();       // vuelve a empezar
-    }, (nodes.length + 1) * 1000); // espera ciclo completo
+      allWhite.value = true;
+    }, (nodes.length + 1) * 1000);
+
+    // Todo apagado antes de reiniciar
+    setTimeout(() => {
+      allWhite.value = false;
+      activeIndex.value = -1; // apagado
+    }, (nodes.length + 2) * 1000);
+
+    // Reiniciamos ciclo completo
+    setTimeout(() => {
+      activeIndex.value = -1;
+      startAnimation();
+    }, (nodes.length + 3) * 1000); // damos 1s extra en blanco
   };
 
   startAnimation();
@@ -102,9 +122,17 @@ onMounted(() => {
   r: 25; /* se agranda un poco al activarse */
 }
 
+.node-white {
+  fill: white !important;
+}
+
 .line-active {
   stroke: #38bdf8;
   stroke-width: 3;
   transition: stroke 0.6s;
+}
+
+.line-white {
+  stroke: white !important;
 }
 </style>
