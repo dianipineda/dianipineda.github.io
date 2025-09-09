@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex justify-center items-center h-screen bg-gray-900">
-      <svg :width="size" :height="size" viewBox="0 0 400 400">
+      <svg :width="size" :height="size" viewBox="0 0 400 400" :style="{ opacity: allWhite ? 0.5 : 0.4 }">
         <!-- Líneas -->
         <line
           v-for="(node, index) in nodes"
@@ -24,16 +24,19 @@
           :key="'circle-' + index"
           :cx="node.x"
           :cy="node.y"
-          :r="20"
+          :r="15"
           class="node"
-          :class="{ 'node-active': activeIndex >= index }"
+          :class="[
+            { 'node-active': activeIndex >= index },
+            { 'node-white': allWhite }
+          ]"
         />
 
         <!-- Nodo central -->
         <circle
           cx="200"
           cy="200"
-          r="30"
+          r="25"
           class="node"
           :class="[
             { 'node-active': activeIndex >= index },
@@ -118,7 +121,7 @@ onMounted(() => {
   transition: fill 0.6s, r 0.6s;
 }
 .node-active {
-  fill: #38bdf8; /* azul brillante */
+  fill: #eab676; /* azul brillante */
   r: 25; /* se agranda un poco al activarse */
 }
 
@@ -127,7 +130,7 @@ onMounted(() => {
 }
 
 .line-active {
-  stroke: #38bdf8;
+  stroke: #eab676;
   stroke-width: 3;
   transition: stroke 0.6s;
 }
