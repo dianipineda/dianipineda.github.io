@@ -108,28 +108,11 @@ button:focus-visible {
   color: #007bff; 
 }
 
-/* Estilos para la galería de PrimeVue */
-/*.p-galleria {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+p {
+  font-size: 1rem;
+  line-height: 1.1;
+  color: #c4c4c4;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  
 }
-
-.p-galleria-item img {
-  transition: opacity 0.5s ease;
-}
-
-.p-galleria-indicators {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.5rem;
-}
-
-.p-galleria-indicator button {
-  background: #ccc;
-  transition: background 0.3s ease;
-}
-
-.p-galleria-indicator button:hover,
-.p-galleria-indicator.p-highlight button {
-  background: #007bff;
-}*/

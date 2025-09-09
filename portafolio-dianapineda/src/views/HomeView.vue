@@ -45,8 +45,13 @@
           ]"
         />
       </svg>
+      <div class="parrafo-container">
+        <p>Soy ingeniera de datos y mi misión es transformar la complejidad de tu información en un activo estratégico. Si tú o tu equipo están perdiendo tiempo valioso intentando unir datos dispersos, yo construyo las soluciones que tu negocio necesita. Mi trabajo consiste en integrar tus sistemas y automatizar flujos para que la información fluya libremente, permitiéndote tomar decisiones más inteligentes y dirigir tu organización hacia su siguiente nivel</p>
+      </div>
+      <router-link to="/portafolio" class="enlace">
+        Conoce mi portafolio
+      </router-link>
     </div>
-      <p>Usa el menú para navegar.</p>
   </div>
 </template>
 
@@ -137,5 +142,28 @@ onMounted(() => {
 
 .line-white {
   stroke: white !important;
+}
+
+.parrafo-container {
+  margin-left: 60px;   /* margen izquierdo */
+  margin-right: 60px;  /* margen derecho */
+}
+
+.parrafo-container p {
+  text-align: justify;  /* justificar texto */
+  line-height: 1.6;     /* mejora la lectura */
+}
+
+.enlace {
+  display: inline-block;   /* para que respete margen vertical */
+  margin-top: 16px;        /* espacio respecto al párrafo */
+  color: #007bff;          /* color azul tipo enlace */
+  text-decoration: none;   /* quita el subrayado */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.enlace:hover {
+  text-decoration: underline; /* subrayado al pasar el mouse */
 }
 </style>
