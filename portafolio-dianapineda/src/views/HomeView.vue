@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="flex items-center w-full h-screen bg-gray-900 text-white px-8">
-      <h1>Bienvenido a mi sitio</h1>
+    <div class="home flex items-center w-full h-screen bg-gray-900 text-white px-8">
+      <h1>Diseñando el camino de tus datos</h1>
       <svg :width="size" :height="size" viewBox="0 0 400 400" :style="{ opacity: allWhite ? 0.5 : 0.4 }">
         <!-- Líneas -->
         <line
@@ -49,7 +49,7 @@
         <p>Soy ingeniera de datos y mi misión es transformar la complejidad de tu información en un activo estratégico. Si tú o tu equipo están perdiendo tiempo valioso intentando unir datos dispersos, yo construyo las soluciones que tu negocio necesita. Mi trabajo consiste en integrar tus sistemas y automatizar flujos para que la información fluya libremente, permitiéndote tomar decisiones más inteligentes y dirigir tu organización hacia su siguiente nivel</p>
       </div>
       <router-link to="/portafolio" class="enlace">
-        Conoce mi portafolio
+        Ejemplos de soluciones en accion
       </router-link>
     </div>
   </div>
@@ -115,7 +115,7 @@ onMounted(() => {
 <style scoped>
 .home {
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   max-width: 800px;
   margin: 0 auto;
 }

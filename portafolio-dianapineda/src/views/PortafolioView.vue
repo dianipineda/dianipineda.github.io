@@ -1,8 +1,8 @@
 <template>
   <div class="portafolio">
-    <h1>Conecta tus datos, impulsa tu negocio</h1>
+    <h1>Soluciones</h1>
     <Galleria
-      v-model:activeIndex="activeIndex"
+      v-model="activeIndex"
       :value="images"
       :numVisible="8"
       :showThumbnails="false"
@@ -88,7 +88,7 @@ export default {
 <style>
 .portafolio {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2.3rem 1rem;
   width: 100%;
   margin: 0 auto;
   /*nuevo*/
