@@ -87,3 +87,5 @@ Para portafolio-dianapineda:
 Nota:
 En GitHub, en Settings > Pages, verifica que la rama sea main (o gh-pages) y la carpeta sea / (root) o /dist.
 Visita https://dianipineda.github.io/portafolio-dianapineda/ (o https://dianipineda.github.io/) tras unos minutos.
+
+#
