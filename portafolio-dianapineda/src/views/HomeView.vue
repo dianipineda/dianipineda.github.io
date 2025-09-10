@@ -137,10 +137,10 @@ const secondaryImages = [
   { itemImageSrc: '/public/oracle-svgrepo-com.svg', alt: 'Oracle' },
   { itemImageSrc: '/public/microsoft-sql-server-logo-svgrepo-com.svg', alt: 'SQL Server' },
   { itemImageSrc: '/public/docker-svgrepo-com.svg', alt: 'Docker' },
-  { itemImageSrc: '/public/postgresql-horizontal.svg', alt: 'Postgresql' },
+  { itemImageSrc: '/public/postgresql-logo-svgrepo-com.svg', alt: 'Postgresql' },
   { itemImageSrc: '/public/kafka-svgrepo-com.svg', alt: 'Kafka' },
   { itemImageSrc: '/public/apache-airflow-svgrepo-com.svg', alt: 'Airflow' },
-  { itemImageSrc: '/public/apachespark-svgrepo-com.svg ', alt: 'Spark' }
+  { itemImageSrc: '/public/icons8-apache-spark.svg', alt: 'Spark' }
 ];
 </script>
 
