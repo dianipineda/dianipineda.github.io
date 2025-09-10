@@ -133,14 +133,14 @@ onMounted(() => {
 
 // Secondary images for the Galleria component
 const secondaryImages = [
-  { itemImageSrc: '/public/python-3-logo-svgrepo-com.svg', alt: 'Python' },
-  { itemImageSrc: '/public/oracle-svgrepo-com.svg', alt: 'Oracle' },
-  { itemImageSrc: '/public/microsoft-sql-server-logo-svgrepo-com.svg', alt: 'SQL Server' },
-  { itemImageSrc: '/public/docker-svgrepo-com.svg', alt: 'Docker' },
-  { itemImageSrc: '/public/postgresql-logo-svgrepo-com.svg', alt: 'Postgresql' },
-  { itemImageSrc: '/public/kafka-svgrepo-com.svg', alt: 'Kafka' },
-  { itemImageSrc: '/public/apache-airflow-svgrepo-com.svg', alt: 'Airflow' },
-  { itemImageSrc: '/public/icons8-apache-spark.svg', alt: 'Spark' }
+  { itemImageSrc: '/python-3-logo-svgrepo-com.svg', alt: 'Python' },
+  { itemImageSrc: '/oracle-svgrepo-com.svg', alt: 'Oracle' },
+  { itemImageSrc: '/microsoft-sql-server-logo-svgrepo-com.svg', alt: 'SQL Server' },
+  { itemImageSrc: '/docker-svgrepo-com.svg', alt: 'Docker' },
+  { itemImageSrc: '/postgresql-logo-svgrepo-com.svg', alt: 'Postgresql' },
+  { itemImageSrc: '/kafka-svgrepo-com.svg', alt: 'Kafka' },
+  { itemImageSrc: '/apache-airflow-svgrepo-com.svg', alt: 'Airflow' },
+  { itemImageSrc: '/icons8-apache-spark.svg', alt: 'Spark' }
 ];
 </script>
 
