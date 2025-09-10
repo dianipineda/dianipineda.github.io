@@ -5,7 +5,7 @@ import PrimeVue from 'primevue/config';
 // Importa los estilos de PrimeVue y los íconos
 import 'primeicons/primeicons.css';
 import '@primevue/themes/aura'; // <-- Este es el estilo para los componentes
-
+import './assets/style.css';
 
 const app = createApp(App);
 app.use(router);
