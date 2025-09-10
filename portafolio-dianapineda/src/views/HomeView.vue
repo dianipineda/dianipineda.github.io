@@ -133,14 +133,14 @@ onMounted(() => {
 
 // Secondary images for the Galleria component
 const secondaryImages = [
-  { itemImageSrc: 'python-3-logo-svgrepo-com.svg', alt: 'Python' },
-  { itemImageSrc: 'oracle-svgrepo-com.svg', alt: 'Oracle' },
-  { itemImageSrc: 'microsoft-sql-server-logo-svgrepo-com.svg', alt: 'SQL Server' },
-  { itemImageSrc: 'docker-svgrepo-com.svg', alt: 'Docker' },
-  { itemImageSrc: 'postgresql-logo-svgrepo-com.svg', alt: 'Postgresql' },
-  { itemImageSrc: 'kafka-svgrepo-com.svg', alt: 'Kafka' },
-  { itemImageSrc: 'apache-airflow-svgrepo-com.svg', alt: 'Airflow' },
-  { itemImageSrc: 'icons8-apache-spark.svg', alt: 'Spark' }
+  { itemImageSrc: '/portafolio-dianapineda/python-3-logo-svgrepo-com.svg', alt: 'Python' },
+  { itemImageSrc: '/portafolio-dianapineda/oracle-svgrepo-com.svg', alt: 'Oracle' },
+  { itemImageSrc: '/portafolio-dianapineda/microsoft-sql-server-logo-svgrepo-com.svg', alt: 'SQL Server' },
+  { itemImageSrc: '/portafolio-dianapineda/docker-svgrepo-com.svg', alt: 'Docker' },
+  { itemImageSrc: '/portafolio-dianapineda/postgresql-logo-svgrepo-com.svg', alt: 'Postgresql' },
+  { itemImageSrc: '/portafolio-dianapineda/kafka-svgrepo-com.svg', alt: 'Kafka' },
+  { itemImageSrc: '/portafolio-dianapineda/apache-airflow-svgrepo-com.svg', alt: 'Airflow' },
+  { itemImageSrc: '/portafolio-dianapineda/icons8-apache-spark.svg', alt: 'Spark' }
 ];
 </script>
 
