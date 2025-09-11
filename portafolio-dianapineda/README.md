@@ -14,7 +14,7 @@ Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://
   node -v
   npm -v
 - Navegar al directorio del proyecto:
-cd .\dianipineda.github.io\portafolio-dianapineda
+  cd .\dianipineda.github.io\portafolio-dianapineda
 
     Nota: cuando se creo el proyecto con el siguiente comando, se indico la necesidad de instalar vue.js y vite 
     npm create vite@latest . -- --template vue
@@ -27,7 +27,7 @@ npm install vue-router@4
 
 - Instalar PrimeVue, PrimeIcons, temas, y el componente Galleria:
 npm install primevue@latest primeicons@latest @primevue/themes@latest
-
+              
 # -------------------------------------------------------------------------------------------
 # Requisitos basicos para correr el proyecto en Linux Ubuntu
 - sudo apt update
@@ -63,25 +63,17 @@ en la terminal de vscode dentro de ./dianipineda.github.io/portafolio-dianapined
 npm run dev
 
 # -------------------------------------------------------------------------------------------
-# Construir el proyecto:
-- construir:
-en la terminal de vscode dentro de ./dianipineda.github.io/portafolio-dianapineda:
-npm run build
+# Construir y desplegar el proyecto en GitHub:
+- Instalar el paquete gh-pages para publicar automaticamente en github:
+npm install gh-pages --save-dev
 
-- Desplegar:
-
-Para dianipineda.github.io:
-xcopy dist\* . /E /Y
-git add .
-git commit -m "Navbar fija y centrada con estilo minimalista"
-git push origin rama
-
-Para portafolio-dianapineda:
-- npm install --save-dev gh-pages
-- Añade a package.json en "scripts":
-  json"deploy": "gh-pages -d dist"
-- Desplegar:
+- Desplegar el proyecto:
+Limpiar la cache del build
+  Para Windows: Remove-Item -Recurse -Force .\dist  
+  Para Linux: rm -rf dist    
+  npm run build
   npm run deploy
+- Listo !    
 
 
 Nota:

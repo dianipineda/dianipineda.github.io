@@ -40,14 +40,14 @@ export default {
     return {
       activeIndex: 0, // índice actual de la galería
       images: [
-        { itemImageSrc: '/portafolio-dianapineda/ingesta_datalake.svg', alt: 'Imagen SVG 1', caption: 'Diseño e implementación de flujo de datos para Big Data' },
-        { itemImageSrc: '/portafolio-dianapineda/integracion_consumo_combustible.svg', alt: 'Imagen SVG 2', caption: 'Automatización de datos entre APIs y Bases de datos'  },
-        { itemImageSrc: '/portafolio-dianapineda/integracion_datos_conductor_a_documento.svg', alt: 'Imagen SVG 3', caption: 'Automatización de datos entre APIs y Bases de datos'  },
-        { itemImageSrc: '/portafolio-dianapineda/integracion_ditribucion_costos_labor.svg', alt: 'Imagen SVG 4', caption: 'Automatización de datos entre diferentes motores de Bases de datos'  },
-        { itemImageSrc: '/portafolio-dianapineda/integracion_novedades_nomina.svg', alt: 'Imagen SVG 5', caption: 'Automatización de datos para archivos planos'  },
-        { itemImageSrc: '/portafolio-dianapineda/integracion_precipitacion_granjas.svg', alt: 'Imagen SVG 6', caption: 'Automatización de datos entre APIs y Bases de datos'  },
-        { itemImageSrc: '/portafolio-dianapineda/integracion_productividad_granjas.svg', alt: 'Imagen SVG 7', caption: 'Automatización de datos entre APIs y Bases de datos'  },
-        { itemImageSrc: '/portafolio-dianapineda/integracion_productividad_maquinaria.svg', alt: 'Imagen SVG 8', caption: 'Automatización de datos entre APIs y Bases de datos'  }
+        { itemImageSrc: '/ingesta_datalake.svg', alt: 'Imagen SVG 1', caption: 'Diseño e implementación de flujo de datos para Big Data' },
+        { itemImageSrc: '/integracion_consumo_combustible.svg', alt: 'Imagen SVG 2', caption: 'Automatización de datos entre APIs y Bases de datos'  },
+        { itemImageSrc: '/integracion_datos_conductor_a_documento.svg', alt: 'Imagen SVG 3', caption: 'Automatización de datos entre APIs y Bases de datos'  },
+        { itemImageSrc: '/integracion_ditribucion_costos_labor.svg', alt: 'Imagen SVG 4', caption: 'Automatización de datos entre diferentes motores de Bases de datos'  },
+        { itemImageSrc: '/integracion_novedades_nomina.svg', alt: 'Imagen SVG 5', caption: 'Automatización de datos para archivos planos'  },
+        { itemImageSrc: '/integracion_precipitacion_granjas.svg', alt: 'Imagen SVG 6', caption: 'Automatización de datos entre APIs y Bases de datos'  },
+        { itemImageSrc: '/integracion_productividad_granjas.svg', alt: 'Imagen SVG 7', caption: 'Automatización de datos entre APIs y Bases de datos'  },
+        { itemImageSrc: '/integracion_productividad_maquinaria.svg', alt: 'Imagen SVG 8', caption: 'Automatización de datos entre APIs y Bases de datos'  }
       ]
     };
   }
